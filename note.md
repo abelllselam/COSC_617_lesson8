@@ -268,3 +268,46 @@ class Welcome extends Component {
 // Export the component so it can be used elsewhere
 export default Welcome;
 ```
+
+# Building Components:
+
+- As mentioned good design is to build components within components. Which means reuse a component so tha abstraction is achieved. Reuse is key!
+
+# Props
+
+- It stands for Properties.
+- It is simply a data passed to the component.
+- It is a JavaScript object that re-render when changed.
+- Props are read-only!
+
+# Rendering a Component:
+
+- Rendering a component means displaying it on the screen by telling React.
+
+```js
+//Create a component:
+import React from 'react';
+
+function Welcome() {
+  return <h1>Hello, React!</h1>;
+}
+
+export default Welcome;
+
+
+//Use the component in App.jsx:
+import React from 'react';
+import Welcome from './Welcome'; // Import your component
+
+function App() {
+  return (
+    <div>
+      <Welcome />  {/* Render the component here */}
+    </div>
+  );
+}
+
+export default App;
+
+- And of course APP component is rendered in the main/index file which means everything will be rendered via the app.jsx(js).
+```
